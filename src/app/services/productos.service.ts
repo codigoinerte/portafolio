@@ -53,7 +53,6 @@ export class ProductosService {
 
   private filtrarProductos(termino:string)
   {
-    console.log(this.productos);
 
     this.productosFiltrados = [];
     termino = termino.toLocaleLowerCase();
@@ -68,6 +67,6 @@ export class ProductosService {
         this.productosFiltrados.push(prod);        
       }
     })
-    console.log(this.productosFiltrados);
+
   }
 }
