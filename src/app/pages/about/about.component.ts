@@ -6,20 +6,8 @@ import { InfoPaginaService } from '../../services/info-pagina.service';
   templateUrl: './about.component.html'
 })
 export class AboutComponent implements OnInit {
-  about: any[] = [];
-  constructor(public infoPaginaService:InfoPaginaService) {
-    this.getAbout();
-   }
+  constructor(public infoPaginaService:InfoPaginaService) { }
 
-   getAbout()
-   {
-    this.infoPaginaService.getAbout()
-        .subscribe((data: any) =>{
-          this.about = data;       
-          console.log(this.about);
-        });      
-   }
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

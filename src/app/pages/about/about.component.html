@@ -1,6 +1,6 @@
 <div class="ae-grid au-xs-ta-center au-mb-4">
 
-    <div *ngFor="let item of about" class="ae-grid__item item-lg-4 ae-kappa au-mb-3 animated fadeIn">
+    <div *ngFor="let item of infoPaginaService.equipo" class="ae-grid__item item-lg-4 ae-kappa au-mb-3 animated fadeIn">
       <img [src]="item.url" [alt]="item.nombre" class="au-mb-3">
       <h5 class="ae-u-bolder au-mt-2">{{ item.nombre }}</h5>
       <p class="ae-u-bolder au-mb-3">{{ item.subtitulo }}</p>

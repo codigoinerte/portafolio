@@ -7,20 +7,21 @@ import { Producto } from '../interfaces/producto.interface';
 })
 export class ProductosService {
   cargando = true;
-  productos:any;
+  productos: Producto[] = [];
 
   constructor(private http:HttpClient) {
-    this.productos = [];
     this.cargarProductos();  
    }
 
   private cargarProductos()
   {
-    this.http.get('https://angular-html-ab87e-default-rtdb.firebaseio.com/productos_idx.json')
-        .subscribe((resp:Producto) =>{
+    this.http.get('https://angular-html-25cf9.firebaseio.com/productos_idx.json')
+        .subscribe( (resp: any) => {
+
           console.log(resp);
           this.productos = resp;
           this.cargando = false;
+
         });
   }
 }
