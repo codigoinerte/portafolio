@@ -32,10 +32,11 @@
         <a *ngFor="let item of productoService.productos"
          [routerLink]="['/item',item.cod]" class="rk-item ae-masonry__item  animated fadeIn">
          <img src="assets/productos/{{item.url}}.jpg" alt="">
-        <div class="item-meta">
+        <div [routerLink]="['/item',item.cod]" class="item-meta">
         <h2>{{item.titulo}}</h2>
         <p>{{item.categoria}}</p>
-        </div></a>
+        </div>
+        </a>
    
 
     </div>
